@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Auditoria de Desvios</h1>
+
+        <!-- Filtro de Turno -->
+        <div>
+            <label for="turno">Selecione o Turno:</label>
+            <select id="turno" onchange="updateEtdOptions()">
+                <option value="">Escolha o turno</option>
+                <option value="1">Turno 1</option>
+                <option value="2">Turno 2</option>
+                <option value="3">Turno 3</option>
+            </select>
+        </div>
+
+        <!-- Filtro de ETD -->
+        <div>
+            <label for="etd">Selecione o ETD:</label>
+            <select id="etd">
+                <option value="">Escolha o ETD</option>
+            </select>
+        </div>
+
+        <!-- Filtro de Canalização -->
+        <div>
+            <label for="canalizacao">Canalização:</label>
+            <input type="text" id="canalizacao">
+        </div>
+
+        <!-- Filtro de Data -->
+        <div>
+            <label for="data">Data:</label>
+            <input type="date" id="data">
+        </div>
+
+        <button onclick="enviarRequisicao()">Enviar</button>
+        <div id="resultados"></div> 
+
+
+     <!-- Biblioteca Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
