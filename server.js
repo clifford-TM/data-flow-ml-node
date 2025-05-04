@@ -35,10 +35,11 @@ app.use(express.json());
 // servindo arquivos estáticos (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname)));
 
-// Definindo uma rota para a página inicial
+// Rota principal serve o arquivo HTML da pasta "public"
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'auditoria.html'));
+  res.sendFile(path.join(__dirname, 'public', 'auditoria.html'));
 });
+
 
 
 // Fazendo um POST para auditoria
