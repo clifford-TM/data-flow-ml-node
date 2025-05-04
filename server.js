@@ -32,8 +32,8 @@ db.connect((err) => {
 // Configurar para aceitar JSON (se ainda não tiver)
 app.use(express.json());
 
-// servindo arquivos estáticos (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname)));
+// Servindo arquivos estáticos (CSS, JS, imagens)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Rota principal serve o arquivo HTML da pasta "public"
 app.get('/', (req, res) => {
