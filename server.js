@@ -32,14 +32,13 @@ db.connect((err) => {
 // Configurar para aceitar JSON (se ainda não tiver)
 app.use(express.json());
 
-// Servindo arquivos estáticos (CSS, JS, imagens)
-app.use(express.static(path.join(__dirname, 'public')));
+// servindo arquivos estáticos (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname)));
 
-// Rota principal serve o arquivo HTML da pasta "public"
+// Definindo uma rota para a página inicial
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'auditoria.html'));
+  res.sendFile(path.join(__dirname, 'auditoria.html'));
 });
-
 
 
 // Fazendo um POST para auditoria
